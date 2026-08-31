@@ -1,0 +1,21 @@
+# Machine artifact, rebuilt from pyproject.toml on any computer
+.venv/
+
+# Python bytecode
+__pycache__/
+*.pyc
+
+# Test and packaging artifacts
+.pytest_cache/
+*.egg-info/
+dist/
+build/
+
+# Local cache for TLEs and ephemeris files: downloaded by the code, never source
+data/
+
+# Editor and OS noise
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
