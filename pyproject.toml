@@ -14,7 +14,7 @@ name = "satellite-tracker"
 version = "0.1.0"
 description = "Real-time satellite tracker: TLE -> SGP4 -> az/el -> pass prediction"
 requires-python = ">=3.12"
-# readme = "README.md"   <- uncomment once the README exists; the build
+readme = "README.md"
 #                          fails if the file it points to is missing.
 # Empty on purpose. Skyfield arrives in Phase 1, when we can say why.
 dependencies = []
