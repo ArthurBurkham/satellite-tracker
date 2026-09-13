@@ -17,7 +17,7 @@ requires-python = ">=3.12"
 readme = "README.md"
 #                          fails if the file it points to is missing.
 # Empty on purpose. Skyfield arrives in Phase 1, when we can say why.
-dependencies = []
+dependencies = ["skyfield>=1.49"]
 
 [project.optional-dependencies]
 # An "extra": `pip install -e ".[dev]"` installs the package AND these.

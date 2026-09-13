@@ -28,3 +28,23 @@ I learned a more complete way to structure the start of my python program. Haven
 
 **Open items**
 - Python 3.14: compiled dependencies may lack wheels — verify at the Phase 1 install
+
+## 2026-09-13 — Phase 1: TLE fetch, cache, and parse
+
+**What I did**
+Sequence: browser fetch + hand-decoding > skyfield dependency > tle.py > rewired __main__ > pinned test > tie-out
+
+**Decisions**
+- Cache before refetch, 3-day default — because ...
+- No network in tests, pinned TLE with pinned expected values
+
+**Measurements**
+- RAAN 224.6171 -> 223.6594 in 4.6 h, about 5 deg/day
+- Python 3.14 wheel verdict: (what the install actually printed — this closes the Phase 0 open item)
+
+**What I learned**
+Hand-decoding an epoch once was enough to justify describe(); anything else you could now explain
+
+**Open items**
+- Staleness should be measured from the TLE epoch, not the file's download time
+- No handling yet for CelesTrak being unreachable
